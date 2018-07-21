@@ -21,8 +21,19 @@ Deploy a simple microservice written in Golang into a Istio service mesh on a Ku
 * The first and second URL will return a JSON response.
 * The last URL will return a text response.
 
-## Create Vagrantfile
-* mkdir -p /data/vm/vagrant/kubernetes/02-cluster-istio/logs
-* cd /data/vm/vagrant/kubernetes/02-cluster-istio
-* Copy the Vagrantfile to /data/vm/vagrant/kubernetes/02-cluster-istio/
+## Create Files
+* mkdir -p /data/vm/vagrant/kubernetes/01-cluster-prometheus/logs
+* Copy the Vagrantfile, 1-microsvc-deployment.yaml, and 2-microsvc-ingress.yaml to /data/vm/vagrant/kubernetes/01-cluster-prometheus/
+
+
+
+## Start Kubernetes Cluster
+* cd /data/vm/vagrant/kubernetes/01-cluster-prometheus/
+* vagrant up
+* wait for VMs to start.  The Kubernetes cluster will start once the VMs are all running. 
+
+## SSH Into Kubemster
+* cd /data/vm/vagrant/kubernetes/01-cluster-prometheus/
+* vagrant ssh kubemaster
+
 
