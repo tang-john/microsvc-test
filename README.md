@@ -43,7 +43,7 @@ Deploy a simple microservice written in Golang into a Istio service mesh on a Ku
 * kubectl get pods
 * You will see two pods that begin with "microsvc-test". Assume one of them is microsvc-test-845b49968-jnq84
 * kubeclt describe pod/microsvc-test-845b49968-jnq84
-* Replace the ccommand above with the pod that is for your installation. Kubernetes will generate a random string after "microsvc-test"
+* Replace the command above with the pod that is for your installation. Kubernetes will generate a random string after "microsvc-test"
 
 
 ### Create Ingress 
