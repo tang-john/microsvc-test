@@ -32,8 +32,20 @@ Deploy a simple microservice written in Golang into a Istio service mesh on a Ku
 * vagrant up
 * wait for VMs to start.  The Kubernetes cluster will start once the VMs are all running. 
 
-## SSH Into Kubemster
+## SSH Into Kubemster 
 * cd /data/vm/vagrant/kubernetes/01-cluster-prometheus/
 * vagrant ssh kubemaster
+### Inject Envoy Proxy into Deployment
+* cd /vagrant
+* ls -ltr
+* You should see the YAML files
+* kubectl apply -f <(istioctl kube-inject -f /vagrant/1-microsvc-deployment.yaml)
+* kubectl get pods
+* You will see two pods that begin with "microsvc-test". Assume one of them is microsvc-test-845b49968-jnq84
+* kubeclt describe pod/microsvc-test-845b49968-jnq84
+* Replace the ccommand above with the pod that is for your installation. Kubernetes will generate a random string after "microsvc-test"
 
+
+### Create Ingress 
+* kubectl apply -f /vagrant/2-microsvc-ingress.yaml
 
