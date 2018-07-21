@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microsvc-test
+  labels:
+    app: microsvc-test
+spec:
+ type: NodePort
+ ports:
+ - port: 8080
+   name: http
+ selector:
+   app: microsvc-test
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microsvc-test
+  labels:
+    app: microsvc-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microsvc-test
+  template:
+    metadata:
+      labels:
+        app: microsvc-test
+        version: v1
+        track: stable
+    spec:
+      containers:
+      - name: microsvc-test
+        image: johntsoftclouds/microsvc-test
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
