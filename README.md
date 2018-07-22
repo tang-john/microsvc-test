@@ -52,6 +52,7 @@ Deploy a simple microservice written in Golang into a Istio service mesh on a Ku
 * You should see an entry for microsvc-test. Notice the IP address. It should be a value like 172.16.0.131. The port should be 80.  
 * Visit the URLs below
 
+** http://172.16.0.131/
 
 ** http://172.16.0.131/james
 
