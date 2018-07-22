@@ -2,10 +2,17 @@
 Deploy a simple microservice written in Golang into a Istio service mesh on a Kubernetes cluster with Prometheus, Grafana, and Jaeger support. 
 
 ## Requirements
-### Golang binaries https://golang.org/doc/install
-### Vagrant
-### VirtualBox
-### Ubuntu 16.04
+* Golang binaries https://golang.org/doc/install
+* Vagrant
+* VirtualBox
+* Ubuntu 16.04
+* 4 available cores: 2 cores for kubemaster, 1 core each for kubenode1 and kubenode2
+* 6 GB RAM
+* IP Addresses listed below
+** 172.16.0.40 for kubemaster
+** 172.16.0.41 for kubenode1
+** 172.16.0.42 for kubenode2
+** 172.16.0.130 - 172.16.0.140 for Kubernetes LoadBalancer and Ingress use.
 
 ## Clone Repository 
 * Start a command shell
