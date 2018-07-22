@@ -56,5 +56,5 @@ Deploy a simple microservice written in Golang into a Istio service mesh on a Ku
 
 ** http://172.16.0.131/james
 
-** http://172.16.0.131/microservices
+** http://172.16.0.131/microsvc-test
 
