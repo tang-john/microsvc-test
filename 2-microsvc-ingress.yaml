@@ -15,7 +15,7 @@ spec:
         backend:
           serviceName: microsvc-test
           servicePort: 8080
-#      - path: /login
-#        backend:
-#          serviceName: microsvc-test
-#          servicePort: 8080
+      - path: /james
+        backend:
+          serviceName: microsvc-test
+          servicePort: 8080
