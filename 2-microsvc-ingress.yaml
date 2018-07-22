@@ -11,6 +11,10 @@ spec:
   rules:
   - http:
       paths:
+      - path: /
+        backend:
+          serviceName: microsvc-test
+          servicePort: 8080
       - path: /microsvc-test
         backend:
           serviceName: microsvc-test
